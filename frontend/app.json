@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "FaceAttend",
+    "slug": "face-attend",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A1A"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.faceattend.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to capture face images for attendance verification.",
+        "NSPhotoLibraryUsageDescription": "This app may access your photos for profile pictures.",
+        "NSFaceIDUsageDescription": "Face recognition is used to verify your identity for attendance."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0A1A"
+      },
+      "package": "com.faceattend.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow FaceAttend to access your camera for face recognition attendance."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow FaceAttend to access your photos."
+        }
+      ]
+    ],
+    "extra": {
+      "API_URL": "http://192.168.1.100:5000"
+    }
+  }
+}
